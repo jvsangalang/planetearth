@@ -33,6 +33,7 @@ a {
     margin-top: 2%;
     text-decoration: none;
     margin: auto;
+    z-index: 2;
 }
 
 #button {

@@ -5,7 +5,7 @@ function setup() {
 }
 
 function draw() {
-  background(205, 105, 94);
+  background(0, 0, 0, 0);
   
   let rotationAngle = map(mouseX, 0, width, 0, TWO_PI);
   
