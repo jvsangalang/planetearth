@@ -35,7 +35,7 @@ function setup() {
 }
 
 function draw() {
-  background(39, 32, 32);
+  background(32, 12, 12);
   
   fill(253, 209, 209);
   text('it has to be loved as if it were embroidered', 200, 150);
