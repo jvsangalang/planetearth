@@ -15,8 +15,8 @@ function setup() {
   seekx2 = rectX + rectWidth / 2;
   seeky2 = rectY + rectHeight / 2;
   link = createA("page3.html", "it has to be stretched and stroked", "_self"); 
-  link.position(width/2.5, height/2); 
-  link.style('font-size', '18px');
+  link.position(width/3, height/2); 
+  link.style('font-size', '30px');
   link.style('position', 'absolute'); 
   link.style('z-index', '-1'); // Keep the link behind the rectangles
   link.style('pointer-events', 'auto');

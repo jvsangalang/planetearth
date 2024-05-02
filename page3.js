@@ -1,7 +1,7 @@
 let detailY;
 // slide to see how detailY works
 function setup() {
-  createCanvas(400, 400, WEBGL);
+  createCanvas(windowWidth, windowHeight, WEBGL);
 }
 
 function draw() {

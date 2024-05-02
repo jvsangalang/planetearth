@@ -48,10 +48,11 @@ function draw() {
 
   image(img, img.x, img.y, img.width, img.height);
   image(flower, 300, 500, flower.width, flower.height);
-  image(bird, 600, 600, bird.width, bird.height);
+  image(bird, 600, 800, bird.width, bird.height);
   image(bird, 200, 200, bird.width, bird.height);
   image(flower, 100, 700, flower.width, flower.height);
-  image(bird, 200, 200, bird.width, bird.height);
+  image(bird, windowWidth/2, windowHeight/2, bird.width, bird.height);
+  image(flower, windowWidth-100, windowHeight-100, flower.width, flower.height);
 
 }
 
