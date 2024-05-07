@@ -1,23 +1,37 @@
 let detailY;
-// slide to see how detailY works
+
 function setup() {
   createCanvas(windowWidth, windowHeight, WEBGL);
+  img = loadImage('celebrated.png');
 }
 
 function draw() {
-  background(0, 0, 0, 0);
+  background(195, 76, 76);
   
   let rotationAngle = map(mouseX, 0, width, 0, TWO_PI);
   
   rotateY(rotationAngle);
+  noStroke();
+  sphere(200, 26, 26);
 
-  sphere(100, 16, 16);
-}
+  texture(img);
 
-function translateOver () {
-  if (mouseX >= 350) {
-    translate
+  if (
+    mouseX > windowWidth/3 &&
+    mouseX < 2*windowWidth/3
+  ) {
+    cursor(HAND);
+  } else {
+    cursor(ARROW); 
   }
 }
 
-//currently trying to figure out how to move it offscreen when mousex is at a certain point?
+function mousePressed() {
+  if (
+    mouseX > windowWidth/3 &&
+    mouseX < 2*windowWidth/3
+  ) {
+  window.location.href = "page4.html";
+  }
+}
+

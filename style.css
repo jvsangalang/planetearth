@@ -8,6 +8,10 @@ body {
     margin: auto;
 }
 
+#redbody {
+    background-color: #C34C4C;
+}
+
 h1 {
     color: #FDD1D1;
     text-align: center;

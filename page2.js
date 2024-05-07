@@ -14,11 +14,11 @@ function setup() {
   seeky = rectY + rectHeight / 2;
   seekx2 = rectX + rectWidth / 2;
   seeky2 = rectY + rectHeight / 2;
-  link = createA("page3.html", "it has to be stretched and stroked", "_self"); 
+  link = createA("page3.html", "It has to be stretched and stroked.", "_self"); 
   link.position(width/3, height/2); 
   link.style('font-size', '30px');
   link.style('position', 'absolute'); 
-  link.style('z-index', '-1'); // Keep the link behind the rectangles
+  link.style('z-index', '-1');
   link.style('pointer-events', 'auto');
   select('a').style('pointer-events', 'none');
 
@@ -62,9 +62,9 @@ function draw() {
     mouseY > link.position().y && 
     mouseY < link.position().y + link.height
   ) {
-    cursor(HAND); // Change cursor to pointer
+    cursor(HAND);
   } else {
-    cursor(ARROW); // Change cursor back to default
+    cursor(ARROW); 
   }
 }
 

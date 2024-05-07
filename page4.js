@@ -2,7 +2,7 @@ var a;
 
 
 function setup() {
-    createCanvas(windowWidth, windowHeight);
+    createCanvas(windowWidth, windowHeight - 50);
     
   }
   

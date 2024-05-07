@@ -38,7 +38,7 @@ function draw() {
   background(32, 12, 12);
   
   fill(253, 209, 209);
-  text('it has to be loved as if it were embroidered', 200, 150);
+  text('It has to be loved as if it were embroidered', 200, 150);
 
   fill(195, 76, 76);
   text('upon it.', targetX, targetY);
