@@ -1,6 +1,6 @@
 let img;
 let targetX = 1000;
-let targetY = 1000; 
+let targetY = 800; 
 let targetSize = 200; 
 let offsetX = 0; 
 let offsetY = 0; 
@@ -44,7 +44,7 @@ function draw() {
   text('upon it.', targetX, targetY);
 
   fill(253, 209, 209);
-  text('with flowers and birds and two joined hearts', 4 * windowWidth/3, 4 * windowWidth/3);
+  text('with flowers and birds and two joined hearts', windowWidth*1/2, windowHeight*7/8);
 
   image(img, img.x, img.y, img.width, img.height);
   image(flower, 300, 500, flower.width, flower.height);

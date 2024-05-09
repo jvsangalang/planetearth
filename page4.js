@@ -7,23 +7,19 @@ function setup() {
   function draw() {
     background(32, 12, 12);
     
-    frameRate(12);
-    text("X: "+mouseX, 0, height/4);
-    text("Y: "+mouseY, 0, height/2);
-    
     let x = map(mouseX, 0, 100, 0, 50);
     
-    //line group 1
+    //right line
     stroke('white');
-    line(453 + mouseX/2, 216 + mouseY/2, 586 + mouseY/2, 196 + mouseX/2);
-    line(453 + mouseX/2, 216 + mouseY/2, 567 + mouseX/2, 259 + mouseY/2);
+    line(453 + mouseX/2, 216 + mouseY/2, windowWidth, 196);
+    line(453 + mouseX/2, 216 + mouseY/2, windowWidth, windowHeight/2);
     
-    //line group 2
-    line(50 + mouseX/2, 75 + mouseY/2, 20 + mouseY/2, 90 + mouseX/2);
-    line(50 + mouseX/2, 75 + mouseY/2, 20 + mouseX/2, 30 + mouseY/2);
+    //left line
+    line(mouseX/3, mouseY*7/8, 0, windowHeight*1/3);
+    line(mouseX/3, mouseY*7/8, 0, windowHeight*7/8);
     
-    //line group 3
-    line(453 + mouseX/2, 158 + mouseY/2, 681 + mouseY/2, 80 + mouseX/2);
-    line(453 + mouseX/2, 158 + mouseY/2, 500 + mouseX/2, 50 + mouseY/2);
+    //top line
+    line(453 + mouseX/3, 158 + mouseY/2, windowWidth*1/4, 0);
+    line(453 + mouseX/3, 158 + mouseY/2, windowWidth*1/2, 0);
   }
   
