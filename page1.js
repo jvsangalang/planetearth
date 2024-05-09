@@ -1,6 +1,6 @@
 let img;
 let targetX = 1000;
-let targetY = 650; 
+let targetY = 1000; 
 let targetSize = 200; 
 let offsetX = 0; 
 let offsetY = 0; 

@@ -1,25 +1,89 @@
+let img;
+let targetX = 4 * windowWidth/3;
+let targetY = 4 * windowHeight/3;
+let targetSize = 200;
+let offsetX = 0;
+let offsetY = 0;
+let bird;
+let flower;
+let font;
+
+function preload() {
+  img = loadImage('drag.svg');
+  flower = loadImage('flower.svg');
+  bird = loadImage('Vector.svg');
+
+  font = loadFont('Quicksand-VariableFont_wght.ttf');
+}
+
 function setup() {
-    createCanvas(windowWidth, windowHeight - 50);
+  createCanvas(windowWidth, windowHeight);
+
+  textFont(font);
+  textSize(25);
+
+  flower.width = 85;
+  flower.height = 84;
+
+  bird.width = 126;
+  bird.height = 96.5;
+
+  img.x = 400;
+  img.y = 400;
+  img.width = 148;
+  img.height = 77.31;
+
+  // Loop to populate flowers
+  for (let i = 0; i < 10; i++) {
+    let flowerX = random(width);
+    let flowerY = random(height);
+    image(flower, flowerX, flowerY, flower.width, flower.height);
   }
 
-function draw() {
+  // Loop to populate birds
+  for (let i = 0; i < 5; i++) {
+    let birdX = random(width);
+    let birdY = random(height);
+    image(bird, birdX, birdY, bird.width, bird.height);
+  }
+}
 
-    background(32, 12, 12);
-    
-    frameRate(12);
-    text("X: "+mouseX, 0, height/4);
-    text("Y: "+mouseY, 0, height/2);
-    
-    // line group 1
-    stroke('white');
-    line(453 + mouseX/2, 216 + mouseY/2, 586 + mouseY/2, 196 + mouseX/2);
-    line(453 + mouseX/2, 216 + mouseY/2, 567 + mouseX/2, 259 + mouseY/2);
-    
-    // line group 2
-    line(50 + mouseX/2, 75 + mouseY/2, 20 + mouseY/2, 90 + mouseX/2);
-    line(50 + mouseX/2, 75 + mouseY/2, 20 + mouseX/2, 30 + mouseY/2);
-    
-    // line group 3
-    line(453 + mouseX/2, 158 + mouseY/2, 681 + mouseY/2, 80 + mouseX/2);
-    line(453 + mouseX/2, 158 + mouseY/2, 500 + mouseX/2, 50 + mouseY/2);
+function draw() {
+  background(32, 12, 12);
+
+  fill(253, 209, 209);
+  text('It has to be loved as if it were embroidered', 200, 150);
+
+  fill(195, 76, 76);
+  text('upon it.', targetX, targetY);
+
+  fill(253, 209, 209);
+  text('with flowers and birds and two joined hearts', 600, 600);
+
+  image(img, img.x, img.y, img.width, img.height);
+}
+
+function mousePressed() {
+  if (mouseX > img.x && mouseX < img.x + img.width && mouseY > img.y && mouseY < img.y + img.height) {
+    offsetX = mouseX - img.x;
+    offsetY = mouseY - img.y;
+  }
+}
+
+function mouseDragged() {
+  if (mouseX > img.x && mouseX < img.x + img.width && mouseY > img.y && mouseY < img.y + img.height) {
+    img.x = mouseX - offsetX;
+    img.y = mouseY - offsetY;
+  }
+}
+
+function mouseReleased() {
+  let d = dist(img.x + img.width / 2, img.y + img.height / 2, targetX, targetY);
+  if (d < targetSize / 2) {
+    redirect();
+  }
+}
+
+function redirect() {
+  window.location.href = "page2.html"
 }

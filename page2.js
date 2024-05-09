@@ -9,7 +9,7 @@ let seekx, seeky, seekx2, seeky2;
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background(0, 0, 0, 0);
-  rectHeight = windowHeight - rectY + 1000;
+  rectHeight = windowHeight - rectY + 2000;
   seekx = rectX + rectWidth / 2;
   seeky = rectY + rectHeight / 2;
   seekx2 = rectX + rectWidth / 2;
