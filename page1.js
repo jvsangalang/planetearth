@@ -38,13 +38,13 @@ function draw() {
   background(32, 12, 12);
   
   fill(253, 209, 209);
-  text('It has to be loved as if it were embroidered', 200, 150);
+  text('It has to be loved as if it were embroidered', windowWidth/3, windowHeight/3);
 
   fill(195, 76, 76);
   text('upon it.', targetX, targetY);
 
   fill(253, 209, 209);
-  text('with flowers and birds and two joined hearts', 600, 600);
+  text('with flowers and birds and two joined hearts', 4 * windowWidth/3, 4 * windowWidth/3);
 
   image(img, img.x, img.y, img.width, img.height);
   image(flower, 300, 500, flower.width, flower.height);
