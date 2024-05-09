@@ -56,3 +56,21 @@ button {
     margin: auto;
     text-align: center;
 }
+
+.about {
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 20px;
+    margin: auto;
+    color: #FDD1D1;
+}
+
+#smaller {
+    font-size: 40pt;
+}
+
+.backbutton {
+    margin: auto;
+    text-align: center;
+    margin-bottom: 10%;
+}
