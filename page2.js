@@ -78,3 +78,12 @@ function mouseClicked() {
     window.open(link.attribute('href'), '_self');
   }
 }
+/************
+
+    Title: <Acid slip>
+    Author: <momentiris>
+    Date: <unknown>
+    Code version: <p5js>
+    Availability: <https://editor.p5js.org/momentiris/sketches/BkhShLPpM>
+
+*************/

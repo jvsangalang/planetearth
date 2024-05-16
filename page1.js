@@ -80,3 +80,13 @@ function mouseReleased() {
   function redirect(){
     window.location.href = "page2.html"
 }
+
+/************
+
+    Title: <drag an object with a mousep>
+    Author: <enickles>
+    Date: <unknown>
+    Code version: <p5js>
+    Availability: <https://editor.p5js.org/enickles/sketches/H1n19TObz>
+
+*************/
